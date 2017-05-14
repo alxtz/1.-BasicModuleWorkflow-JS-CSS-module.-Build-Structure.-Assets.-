@@ -175,7 +175,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(6)(content, options);
+var update = __webpack_require__(7)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -216,7 +216,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "div.middle {\n    margin: 150px;\n    height: 300px;\n    background-color: cyan;\n    border: 20px solid tomato;\n    border-radius: 20px;\n}\n", ""]);
+exports.push([module.i, "div.middle {\n    margin: 150px;\n    height: 300px;\n    border: 20px solid tomato;\n    border-radius: 20px;\n    background-image: url(" + __webpack_require__(6) + ");\n    background-size: cover;\n}\n", ""]);
 
 // exports
 
@@ -237,6 +237,12 @@ exports.push([module.i, "body {\n    background-color: chocolate;\n}\n", ""]);
 
 /***/ }),
 /* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/background.jpg";
+
+/***/ }),
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -273,7 +279,7 @@ var stylesInDom = {},
 	singletonElement = null,
 	singletonCounter = 0,
 	styleElementsInsertedAtTop = [],
-	fixUrls = __webpack_require__(7);
+	fixUrls = __webpack_require__(8);
 
 module.exports = function(list, options) {
 	if(typeof DEBUG !== "undefined" && DEBUG) {
@@ -549,7 +555,7 @@ function updateLink(linkElement, options, obj) {
 
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports) {
 
 

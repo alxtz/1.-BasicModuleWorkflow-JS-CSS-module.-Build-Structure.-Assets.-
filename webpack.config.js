@@ -14,7 +14,6 @@ module.exports = {
 
         rules: [
             {
-
                 test: /\.css/,
                 use: [
                     {
@@ -26,8 +25,14 @@ module.exports = {
                         loader: 'css-loader'
                     }
                 ]
-
-
+            },
+            {
+                test: /\.(jpe?g|png|gif|svg)$/i,
+                use: [
+                    {
+                        loader: "file-loader?name=[name].[ext]&outputPath=assets/"
+                    }
+                ]
             }
         ]
 

@@ -19,6 +19,15 @@
 2. add css-loader & style-loader
 3. import a css file
 
+## Add Support for background-image: url(''), Structure our Assets
+1. add Release/assets/background.jpg into our project
+2. try to use it as background-image(Module parse failed)
+3. add file-loader for image files(config test, outputPath, option file name)
+4. by default file loader uses hash file names, and will auto bind to merged css
+5. use name=[name].[ext] for your original name
+6. this is just for demo and learning structure purpose, assets tend to structure more complicate in real projects
+7. images works all fine no matter where you start your server
+
 ### Develop Notes
 * use $webpack --display-error-details for debug details
 * css-loader[module], is to enable the css module sepc, which you'll need a component system to support it
