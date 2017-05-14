@@ -8,6 +8,29 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'Release'),
         filename: 'build.js'
+    },
+
+    module: {
+
+        rules: [
+            {
+
+                test: /\.css/,
+                use: [
+                    {
+                        // merge css to build.js
+                        loader: 'style-loader'
+                    },
+                    {
+                        // add capability to require css, but still not merge to build.js
+                        loader: 'css-loader'
+                    }
+                ]
+
+
+            }
+        ]
+
     }
 
 }
